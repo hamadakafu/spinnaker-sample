@@ -1,0 +1,7 @@
+Dockerfile
+.dockerignore
+
+
+.vscode
+.git
+main
