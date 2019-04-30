@@ -18,7 +18,7 @@ jobs:
           name: Push docker image
           command: |
             docker build -t sample-spinnaker .
-            TAG=gcr.io/spinnaker-kafu/sample-spinnaker:pushed-‘date +% Y%m%d%H%M%S‘
+            TAG=gcr.io/spinnaker-kafu/sample-spinnaker:$CIRCLE_SHA1
             docker tag sample-spinnaker $TAG
             docker push $TAG
             LATEST_TAG=gcr.io/pospome-deployflow-project/go-web-server:latest
